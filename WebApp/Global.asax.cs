@@ -21,7 +21,7 @@ namespace WebApp
         protected void Session_Start(object sender, EventArgs e)
         {
             Session["User"] = new User { Name = HttpContext.Current.User.Identity.Name };
-            Session["Customers"] = new List<Customer> { new Customer { Name = "bla1" }, new Customer { Name = "bla2" } };
+            Session["Customers"] = new List<Customer> { new Customer { Name = "bla1" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" }, new Customer { Name = "bla2" } };
         }
         
     }
