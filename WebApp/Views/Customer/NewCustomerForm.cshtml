@@ -1,0 +1,9 @@
+﻿<button id="btnNewCustomer" onclick="$('#modalNewCustomer').dialog()" >New Customer</button>
+<div id="modalNewCustomer" style="display:none">
+    @using (Html.BeginForm("Add", "Customer", FormMethod.Post))
+    {
+        @Html.Label("Name")
+        @Html.TextBox("Name")
+        <input type="submit" value="Submit" />
+    }
+</div>
