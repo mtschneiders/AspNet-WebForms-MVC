@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebFormsAndMVC
+namespace WebApp
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class SomeControl : ViewUserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            bla.Text = HttpContext.Current.User.Identity.Name;
+
         }
     }
 }

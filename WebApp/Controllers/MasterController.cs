@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebFormsAndMVC.Controllers
+namespace WebApp.Controllers
 {
-    public class MasterController : Controller
+    public class MasterController : ApplicationController
     {
         // GET: Master
         public ActionResult UserData()

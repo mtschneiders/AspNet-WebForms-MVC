@@ -5,14 +5,14 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebFormsAndMVC.Controllers
+namespace WebApp.Controllers
 {
-    public class DummyController : Controller
+    public class DummyController : ApplicationController
     {
         // GET: Dummy
         public ActionResult Index()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application description page." + UserData.Name;
 
             WindowsIdentity clientId = (WindowsIdentity)HttpContext.User.Identity;
 
