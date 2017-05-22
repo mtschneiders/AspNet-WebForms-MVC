@@ -4,11 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/Gridmvc.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/ladda-bootstrap/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", required: false)
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
 </head>
 <body>
@@ -38,12 +35,9 @@
         </footer>
     </div>
 
-    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
-    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/gridmvc.min.js"></script>
-    <script src="~/Scripts/gridmvc-ext.js"></script>
-    <script src="~/Scripts/ladda-bootstrap/ladda.min.js"></script>
-    <script src="~/Scripts/ladda-bootstrap/spin.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
 </body>
 </html>

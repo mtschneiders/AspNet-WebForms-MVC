@@ -1,22 +1,23 @@
 ﻿@using GridMvc.Html
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customers";
+}
+
+@section styles 
+{
+    @Styles.Render("~/Content/gridmvc")
 }
 
 @model List<Entity.Customer>
 
-<h2>Index</h2>
-<span>@ViewBag.Message</span>
+<h2>Customers</h2>
 
-
-@Html.Grid(Model).Columns(columns =>
-{
-    columns.Add(foo => foo.Name)
-           .Titled("Customer Name")
-           .SetWidth(110)
-           .Sortable(true)
-           .Filterable(true);
-}).WithPaging(10)
-
+@Html.Action("GetGrid")
 @Html.Partial("NewCustomerForm")
+
+@section scripts 
+{
+    @Scripts.Render("~/bundles/gridmvc")
+    @Scripts.Render("~/bundles/application/customer")
+}

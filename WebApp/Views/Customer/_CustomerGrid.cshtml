@@ -1,0 +1,14 @@
+﻿@using GridMvc.Html
+@using GridMvc.Sorting
+
+@model Grid.Mvc.Ajax.GridExtensions.AjaxGrid<Entity.Customer>
+
+@(
+    Html.Grid(Model).Named("CustomerGrid")
+        .Columns(columns =>
+        {
+            columns.Add(f => f.Name).Titled("Name");
+        })
+        .Filterable()
+        .Sortable()
+        .WithPaging(5))
